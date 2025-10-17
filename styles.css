@@ -1,6 +1,44 @@
 /* This is a css comment */
 
+/*A CSS reset */
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
 /* Targets the body tag <body> */
 body {
     background-color: #fafae2;
+    font-family: "BBH Sans Bogle" Arial, Helvetica, sans-serif;
+    line-height: 1.5; /* 1.5 Line spacing */
+    color: #2e0a03;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "BBH Sans Bogle", sans-serif;
+    margin-bottom: 0.5em; /* em - scales on font size */
+    /* if the font is 40px, 0.5em is 20px */
+}
+
+section {
+    background-color: #fafae2;
+    color: black;
+    margin: 5em;
+    padding: 2em;
+
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 18px
+}
+
+nav {
+    padding: 1cm;
+    font-weight: bold;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
 }
