@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Cookie&family=Dancing+Script:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Fredoka:wght@300..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Parisienne&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/** CSS Variables **/
+:root {
+    --primary: #4b2d1e;
+    --light: #ffffff;
+    --dark: #362d2a;
+    --muted: #f8f6f5;
+
+    --font-normal: Roboto, Arial, sans-serif;
+    --font-heading: 'Noto Serif', serif;
+}
+
+/*Css Reset - Star symbol '*' Targets everything in the website linked*/
+*{margin: 0%;
+    padding: 0%;
+}
+
+body {
+    font-family: var(--font-normal);
+    line-height: 1.5;
+}
+
+h1, h2, h3. h4, h5, h6 {
+    font-family: var(--font-heading);
+    margin-bottom: 0.5rem;  
+}
+
+p {
+    margin-bottom: 0.5rem;
+}
+
+/******************    COLOUR    *******************/
+
+.bg-primary {
+    background-color: var(--primary);
+}
+
+.bg-light {
+    background-color: var(--light);
+}
+
+.bg-dark {
+    background-color: var(--dark);
+}
+
+.bg-muted {
+    background-color: var(--muted);
+}
+
+.text-primary {
+    color: #4b2d1e;
+}
+
+.text-light {
+    color: #ffffff;
+}
+
+.text-dark {
+    color: #362d2a;
+}
+
+.text-muted {
+    color: #f8f6f5;
+}
+
+
+/******************    SWATCHES    *******************/
+
+.swatches{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.swatch .swatch-value {
+    border-radius: 100%;
+    width: 3rem; /*root font size 16px*/
+    aspect-ratio: 1/1;
+
+    box-shadow: 0 0.1rem 0.2rem 0.1rem rgba(45, 40, 35, 0.2); /* Adds shadow onto the colour pallette looking nicer */
+}
+
+.swatch .swatch-name {
+    text-align: center;
+}
