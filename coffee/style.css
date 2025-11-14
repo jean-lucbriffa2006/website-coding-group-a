@@ -1,11 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* CSS Variables */
+/*Very important use to keep up with the style guide and not mess up*/
 :root {
     --primary: #4b2d1e;
+    --primary-tint: #725b38;
+    --primary-shade: #31110d;
+
     --dark: #362d2a;
     --light: #ffffff;
-    --muted: #f8f6f5;
+
+    --muted: #e8e6e5;
+    --muted-tint: #f8f8f8;
+    --muted-shade: #b6b4b3;
 
     --font-normal: Roboto, Arial, sans-serif;
     --font-heading: 'Noto Serif', serif;
@@ -17,6 +24,7 @@
 }
 
 /* CSS Reset - Targets Everything */
+/*Removes everything from the html*/
 * {
     margin: 0;
     padding: 0;
@@ -37,6 +45,7 @@ p {
 }
 
 /************************* BUTTONS *************************/
+/*INCLUDES MOUSE HOVERING, CLICKING INTERACTIONS VIP*/
 .btn {
     border: none;
     border-radius: 1rem;
@@ -44,6 +53,42 @@ p {
     padding: var(--space-1) var(--space-2);
 
     cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-tint)
+}
+
+.btn-primary:active {
+    background-color: var(--primary-shade);
+}
+
+.btn-secondary {
+    background-color: var(--muted);
+    color: var(--dark);
+}
+
+.btn-secondary:hover {
+    background-color: var(--muted-tint);
+}
+
+.btn-secondary:active {
+    background-color: var(--muted-shade);
+}
+
+/*Annoying purple links remover*/
+.link {
+    color: var(--primary);
+    text-decoration: underline;
+}
+ /*Link colour change*/
+.link:hover {
+    color: var(--primary-tint);
 }
 
 /************************* COLOR *************************/
