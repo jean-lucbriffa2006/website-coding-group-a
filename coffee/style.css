@@ -1,19 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Cookie&family=Dancing+Script:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Fredoka:wght@300..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Parisienne&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-/** CSS Variables **/
+/* CSS Variables */
 :root {
     --primary: #4b2d1e;
-    --light: #ffffff;
     --dark: #362d2a;
+    --light: #ffffff;
     --muted: #f8f6f5;
 
     --font-normal: Roboto, Arial, sans-serif;
     --font-heading: 'Noto Serif', serif;
+
+    --space-0: 0;
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 2rem;
 }
 
-/*Css Reset - Star symbol '*' Targets everything in the website linked*/
-*{margin: 0%;
-    padding: 0%;
+/* CSS Reset - Targets Everything */
+* {
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -21,63 +27,72 @@ body {
     line-height: 1.5;
 }
 
-h1, h2, h3. h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    margin-bottom: 0.5rem;  
+    margin-bottom: 0.5rem;
 }
 
 p {
     margin-bottom: 0.5rem;
 }
 
-/******************    COLOUR    *******************/
+/************************* BUTTONS *************************/
+.btn {
+    border: none;
+    border-radius: 1rem;
 
-.bg-primary {
-    background-color: var(--primary);
+    padding: var(--space-1) var(--space-2);
+
+    cursor: pointer;
 }
 
-.bg-light {
-    background-color: var(--light);
-}
+/************************* COLOR *************************/
+.bg-primary { background-color: var(--primary); }
+.bg-dark { background-color: var(--dark); }
+.bg-light { background-color: var(--light); }
+.bg-muted { background-color: var(--muted); }
 
-.bg-dark {
-    background-color: var(--dark);
-}
+.text-primary { color: var(--primary); }
+.text-dark { color: var(--dark); }
+.text-light { color: var(--light); }
+.text-muted { color: var(--muted); }
 
-.bg-muted {
-    background-color: var(--muted);
-}
+/************************* LAYOUT *************************/
+.d-flex { display: flex; }
+.d-grid { display: grid; }
 
-.text-primary {
-    color: #4b2d1e;
-}
+.flex-between { justify-content: space-between; }
 
-.text-light {
-    color: #ffffff;
-}
+.grid-3col { grid-template-columns: repeat(3, 1fr); }
+.grid-2col { grid-template-columns: repeat(2, 1fr); }
 
-.text-dark {
-    color: #362d2a;
-}
+/************************* SPACING *************************/
+.p-0 { padding: var(--space-0); }
+.p-1 { padding: var(--space-1); }
+.p-2 { padding: var(--space-2); }
+.p-3 { padding: var(--space-3); }
 
-.text-muted {
-    color: #f8f6f5;
-}
+.m-0 { margin: var(--space-0); }
+.m-1 { margin: var(--space-1); }
+.m-2 { margin: var(--space-2); }
+.m-3 { margin: var(--space-3); }
 
+.gap-0 { gap: var(--space-0); }
+.gap-1 { gap: var(--space-1); }
+.gap-2 { gap: var(--space-2); }
+.gap-3 { gap: var(--space-3); }
 
-/******************    SWATCHES    *******************/
-
-.swatches{
+/************************* SWATCHES *************************/
+.swatches {
     display: flex;
-    gap: 0.5rem;
 }
 
 .swatch .swatch-value {
     border-radius: 100%;
-    width: 3rem; /*root font size 16px*/
-    aspect-ratio: 1/1;
+    aspect-ratio: 1 / 1;
+    width: 3rem; /* Root font size: 16px */
 
-    box-shadow: 0 0.1rem 0.2rem 0.1rem rgba(45, 40, 35, 0.2); /* Adds shadow onto the colour pallette looking nicer */
+    box-shadow: 0 0.1rem 0.2rem 0.1rem rgba(45, 40, 35, 0.2);
 }
 
 .swatch .swatch-name {
