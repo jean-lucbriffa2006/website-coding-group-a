@@ -14,6 +14,9 @@
     --muted-tint: #f8f8f8;
     --muted-shade: #b6b4b3;
 
+    --shadow-dark: 0 0.1rem 0.2rem 0.1rem rgba(45, 40, 35, 0.2);
+    --shadow-light: 0 0.1rem 0.2rem 0.1rem rgba(255, 255, 255, 0.5);
+
     --font-normal: Roboto, Arial, sans-serif;
     --font-heading: 'Noto Serif', serif;
 
@@ -104,6 +107,11 @@ p {
 .text-muted { color: var(--muted); }
 
 /************************* Components *************************/
+.product-image {
+    position: relative;
+    /* tells all children that this is the parent */
+}
+
 .product-image img {
     aspect-ratio: 16 / 9;
     width: 100%;
@@ -112,8 +120,48 @@ p {
     border-radius: var(--space-2);
 }
 
+.product-image .product-tag {
+    background-color: var(--dark);
+    color: var(--light);
+    box-shadow: var(--shadow-light);
+    
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--space-3);
+    
+    position: absolute;
+    left: var(--space-2);
+    top: var(--space-2);
+}
+
+.tags {
+    display: flex;
+    list-style: none;
+    gap: var(--space-1);
+}
+
+.tags .tag-item{
+    background-color: var(--primary);
+    color: var(--light);
+
+    text-decoration: none;
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--space-3);
+}
 
 /************************* LAYOUT *************************/
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.container section {
+    box-shadow: var(--shadow-dark);
+
+    padding: var(--space-2);
+    margin-top: var(--space-2);
+}
+
 .d-flex { display: flex; }
 .d-grid { display: grid; }
 
@@ -141,6 +189,10 @@ p {
 /************************* SWATCHES *************************/
 .swatches {
     display: flex;
+    aspect-ratio: 1 / 1;
+    width: 3rem;
+    
+    box-shadow: var(--dark);
 }
 
 .swatch .swatch-value {
